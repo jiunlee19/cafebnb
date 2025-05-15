@@ -21,9 +21,9 @@ PC   (769~)
 Index.html   
 Detail.html   
 Components/   
-├── Header.html   
-├── Footer.html
-└── Slide.html
+├── Header.html    
+├── Footer.html   
+└── Slide.html   
 Js/   
 └── Include.js   
 
