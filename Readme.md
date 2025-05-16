@@ -6,16 +6,16 @@
 - [ ] 코드 컨벤션 정하기
 
 ### 반응형 개발을 위한 px분기점
-모바일 (~480)   
-PC   (769~)   
+모바일     (480이하까지)   
+PC(디폴트) (769이상부터)   
 
 * 추후에 통일하는 걸로. 글씨체, 여백, 글씨 크기
 
-### 코드 컨벤션
-상수변수 - UPPER_CASE
-변수,함수,메소드 - camelCase
-클래스,Exception - kebab-case
-파일,폴더명 - PascalCase
+### 코드 컨벤션   
+상수변수 - UPPER_CASE   
+변수,함수,메소드 - camelCase   
+클래스,Exception - kebab-case   
+파일,폴더명 - PascalCase   
 
 ### 파일 구조
 Index.html   
