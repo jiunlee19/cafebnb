@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'AirbnbCereal';
+    src: url('../Fonts/AirbnbCereal_W_Md.otf') format('otf');
+    font-weight:600;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'AirbnbCereal';
+}
+
+/* .image-slide {
+    transition: transform 0.5s;
+} */
+
+.btns > button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid gray;
+}
