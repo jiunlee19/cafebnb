@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'AirbnbCereal';
-    src: url('../Fonts/AirbnbCereal_W_Md.otf') format('otf');
-    font-weight:600;
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
 
-    font-family: 'AirbnbCereal';
+    font-family: 'GmarketSansMedium';
 }
 
 /* .image-slide {
