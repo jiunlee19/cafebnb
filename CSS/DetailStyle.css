@@ -1,0 +1,239 @@
+:root{
+  --max-width:1024px;
+}
+
+body{
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header nav {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav ul {
+    list-style:none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+header nav ul li a{
+    text-decoration:none;
+}
+
+header nav ul li a:hover{
+    text-decoration:underline;
+}
+
+main section#photo,
+main section#menu,
+main section#info,
+main section#review{
+  width:100%;
+  max-width: var(--max-width);
+  margin:0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+main section .photo-img,
+main section .menu-img {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+main section .photo-img{
+    border-radius: 10px;
+    height: 300px;
+}
+
+main section .photo-img img{
+    border-radius: 10px;
+    margin-left: 5%;
+    width: 30%; /* 반응형 이미지 크기 */
+    object-fit: cover;
+}
+
+main section .menu-img figure{
+    position: relative;
+    width:100%;
+    height: 400px;
+}
+main section .menu-img figure img{
+    border-radius: 10px;
+    width:100%;
+    height:300px;
+    object-fit: cover;
+}
+
+.menu-img figcaption {
+    position:absolute;
+    bottom:1px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* 좌우 중앙 정렬 */
+    width: 90%; /* 고정 너비로 균일 정렬 */
+    max-width: 70%; /* 최대 너비 제한 */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 10px; /* 내부 여백 추가 */
+  }
+  
+  .menu-img figcaption p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .menu-img figcaption p strong {
+    color: #e74c3c; /* 강조 색상 */
+    font-size: 16px;
+  }
+
+  #info{
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  #info .hours,
+  #info .sns{
+    display: flex;
+  }
+  #info .hours p,
+  #info .sns p{
+    margin-left: 10px;
+  }
+
+.service ul {
+    list-style:none;
+    display: flex;
+    flex-wrap: wrap; /* 두 줄로 줄바꿈 */
+    gap:10px;
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    
+}
+
+.service ul li{
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    
+}
+
+#review {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#review ul {
+  list-style: none;
+  padding: 0;
+}
+
+#review ul li {
+  background: aliceblue;
+  margin-bottom: 2px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  min-height: 40px;
+  position: relative;
+  color: #333;
+  box-sizing: border-box;
+}
+
+#review ul li .bar {
+  background: linear-gradient(to right, #c9dbfa, #6c83a9);
+  color: #1b1919;
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+  box-sizing: border-box;
+  height: calc(100% - 20px);
+  width: 0; /* 초기 너비 */
+  transition: width 2s ease; 
+  opacity: 1;
+}
+
+#review ul li .bar-1 { width: 80%; }
+#review ul li .bar-2 { width: 90%; }
+#review ul li .bar-3 { width: 70%; }
+#review ul li .bar-4 { width: 85%; }
+#review ul li .bar-5 { width: 75%; }
+#review ul li .bar-6 { width: 88%; }
+#review ul li .bar-7 { width: 65%; }
+
+
+
+
+
+
+@media (max-width: 900px) {
+  header nav ul {
+    flex-wrap: wrap;
+    gap:10px;
+    padding:10px;
+  }
+
+  header nav ul li {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  main section .photo-img,
+  main section .menu-img {
+    flex-direction: column;
+    height: auto;
+  }
+
+  main section .photo-img img{
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  main section .menu-img figure{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .menu-img figcaption {
+    bottom:-50px;
+  }
+
+  #review {
+    width: 100%;
+    max-width: 1024px;
+  }
+
+  main section .photo-img,
+  main section .menu-img{
+    flex-direction: column;
+  }
+}

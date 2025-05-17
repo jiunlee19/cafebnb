@@ -1,0 +1,124 @@
+footer {
+    background-color: #F7F7F7;
+    padding: 0 48px;
+    font-size: 14px;
+}
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+footer li {
+    list-style: none;
+}
+footer button {
+    font-weight: 500;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.footer-top, .footer-cen {
+    width: 100%;
+    padding: 48px 0;
+}
+.footer-top p {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.footer-top .keyword {
+    position: relative;
+}
+
+.footer-top .keyword .divider {
+    position: absolute;
+    width: 100%;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    background-color: #ddd;
+}
+.footer-top .keyword-list {
+    font-weight: 500;
+}
+.footer-top .btn-wrap button {
+    padding: 10px 0;
+    position: relative;
+}
+.footer-top .btn-wrap button:after {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    content: '';
+    height: 2px;
+    background-color: #000;
+    width: 100%;
+}
+.footer-top .keyword-list {
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 8px;
+    row-gap: 24px;
+}
+.footer-cen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #ddd;
+}
+.footer-cen .menu-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.footer-cen .menu-list li:first-child {
+    font-weight: 500;
+}
+.footer-btm {
+    padding: 24px 0;
+}
+.footer-btm .info-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 8px;
+}
+.footer-btm .txt-menu .info-list {
+    display: flex;
+    gap: 8px;
+}
+.footer-btm .txt-info {
+    display: flex;
+    align-items: center;
+}
+.footer-btm .txt-info .lang {
+    display: flex;
+    padding: 6px 8px;
+}
+.footer-btm .txt-info .btn button, .footer-btm .txt-info .money {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    padding: 6px 8px;
+}
+.footer-btm .txt-info .sns-list {
+    display: flex;
+    gap: 20px;
+}
+.footer-btm .txt-info .sns-list li {
+    width: 16px;
+    height: 16px;
+}
+.footer-btm .txt-info .sns-list li a {
+    font-size: 0;
+}
+.footer-btm .txt-copy {
+    color: #6a6a6a;
+    font-size: 10px;
+}
