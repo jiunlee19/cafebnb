@@ -45,7 +45,6 @@
 }
 .main-img .img-wrap {
     width: 100%;
-    aspect-ratio: 3 / 2;
     max-height: 480px;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -81,6 +80,7 @@
     position: relative;
     height: 50%;
     flex: 1;
+    overflow: hidden;
 }
 .main-img .img-box.center .top:hover .overlay,
 .main-img .img-box.center .bottom:hover .overlay,
