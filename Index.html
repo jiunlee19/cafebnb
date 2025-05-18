@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container" style="width:100vw; height:100vh;">
-        <div class="header"></div>
-        <div class="contents" style=" width:100%;">
+        <div class="header"><div data-include="./Components/Header.html"></div></div>
+        <div class="contents" style=" width:100%; margin-bottom:50px;">
             <div class="classification-title" 
             style="width:90%; margin:0; padding:2rem; display:flex; flex-direction: row; justify-content:space-between;"> 
                 <p style="font-size: 1.125rem;">뷰 맛집!</p>
@@ -57,7 +57,7 @@
 
             </div>
         </div>
-        <div class="footer"></div>
+        <div class="footer"><div data-include="./Components/Footer.html"></div></div>
     </div>
 
     <script>
@@ -110,6 +110,7 @@
         // 초기 상태 설정
         updateButtonsColor();
     </script>
+    <script src="JS/Include.js"></script>
     
     
 </body>
