@@ -199,13 +199,7 @@ main section .menu-img figure img{
   opacity: 1;
 }
 
-#review ul li .bar-1 { width: 80%; }
-#review ul li .bar-2 { width: 90%; }
-#review ul li .bar-3 { width: 70%; }
-#review ul li .bar-4 { width: 85%; }
-#review ul li .bar-5 { width: 75%; }
-#review ul li .bar-6 { width: 88%; }
-#review ul li .bar-7 { width: 65%; }
+/* 리뷰 바 너비는 JavaScript에서 동적으로 설정됩니다 */
 
 @media (max-width: 900px) {
   main {
