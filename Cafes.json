@@ -1,15 +1,51 @@
 [
     {
       "name": "이끼숲소길",
-      "image": "img/이끼숲소길01.jpg",
+      "image": "img/이끼숲소길/이끼숲소길01.jpg",
       "location": "애월",
       "description": "5.0"
     },
     {
-        "name": "이끼숲소길",
-        "image": "img/이끼숲소길01.jpg",
+        "name": "구아우쇼콜라",
+        "image": "img/구아우쇼콜라/구아우쇼콜라.jpg",
+        "location": "서귀포",
+        "description": "4.9"
+    },
+    {
+        "name": "마마롱",
+        "image": "img/마마롱/마마롱.jpg",
+        "location": "서귀포",
+        "description": "4.7"
+    },
+    {
+        "name": "만첩",
+        "image": "img/만첩/만첩.jpg",
         "location": "애월",
-        "description": "5.0"
-      },
+        "description": "4.9"
+    },
+    {
+        "name": "사닮과",
+        "image": "img/사닮과/사닮과.jpg",
+        "location": "서귀포",
+        "description": "4.5"
+    },
+    {
+        "name": "카페679",
+        "image": "img/카페679/카페679.jpg",
+        "location": "서귀포",
+        "description": "4.9"
+    },
+    {
+        "name": "티나케이크",
+        "image": "img/티나케이크/티나케이크.jpg",
+        "location": "서귀포",
+        "description": "4.6"
+    },
+    {
+        "name": "희수다옥",
+        "image": "img/희수다옥/희수다옥.jpg",
+        "location": "애월",
+        "description": "4.1"
+    }
   ]
   
