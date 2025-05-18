@@ -26,7 +26,7 @@ header nav ul {
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 5px 10px;
     box-sizing: border-box;
 }
 
@@ -34,14 +34,13 @@ header nav ul li {
   transition: var(--transition);
 }
 
-
 header nav ul li a{
     text-decoration:none;
     color: #333;
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 400;
     display: block;
-    padding: 8px 12px;
+    padding: 4px 8px;
     transition: var(--transition);
 }
 
@@ -49,6 +48,11 @@ header nav ul li a:hover{
     text-decoration:underline;
     transform: translateY(-3px); 
 }
+
+main {
+    margin-top: 45px; /* 네비게이션과 자연스러운 간격 */
+}
+
 main section#photo,
 main section#menu,
 main section#info,
@@ -203,12 +207,11 @@ main section .menu-img figure img{
 #review ul li .bar-6 { width: 88%; }
 #review ul li .bar-7 { width: 65%; }
 
-
-
-
-
-
 @media (max-width: 900px) {
+  main {
+    margin-top: 40px; /* 모바일에서 여백 줄임 */
+  }
+  
   header nav ul {
     flex-wrap: wrap;
     gap:10px;

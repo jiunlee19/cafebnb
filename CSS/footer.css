@@ -123,3 +123,40 @@ footer button {
     color: #6a6a6a;
     font-size: 10px;
 }
+
+@media (max-width: 900px) {
+    footer {
+        padding: 0 24px;
+    }
+    .footer-top .keyword-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-cen {
+        grid-template-columns: 1fr;
+        border-bottom: 0;
+        padding: 0;
+    }
+    .footer-cen .menu-list {
+        border-bottom: 1px solid #ddd;
+        padding: 24px 0;
+    }
+    .footer-btm .info-wrap {
+        flex-direction: column-reverse;
+        align-items: baseline;
+        padding-bottom: 8px;
+    }
+    .footer-btm .txt-info {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 12px;
+    }
+    .footer-btm .txt-info .lang {
+        margin-left: -15px;
+    }
+    .footer-btm .txt-menu .info-list {
+        flex-wrap: wrap;
+    }
+    .footer-btm .txt-menu .info-list li:first-child {
+        width: 100%;
+    }
+}
