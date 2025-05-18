@@ -1,32 +1,76 @@
+:root{
+  --max-width:1024px;
+  --transition: all 0.3s ease;
+}
+
+body{
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
 header nav {
     position: fixed;
     top:0;
     left:0;
     width: 100%;
     z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header nav ul {
     list-style:none;
     display: flex;
     justify-content: space-around;
-    width: 1240px;
+    width: 100%;
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+header nav ul li {
+  transition: var(--transition);
 }
 
 header nav ul li a{
     text-decoration:none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+    padding: 4px 8px;
+    transition: var(--transition);
 }
 
 header nav ul li a:hover{
     text-decoration:underline;
+    transform: translateY(-3px); 
 }
+
+main {
+    margin-top: 45px; /* 네비게이션과 자연스러운 간격 */
+}
+
+main section#photo,
+main section#menu,
+main section#info,
+main section#review{
+  width:100%;
+  max-width: var(--max-width);
+  margin:0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 main section .photo-img,
-main section .menu-img
- {
-    width: 1024px;
+main section .menu-img {
+    width: 100%;
+    max-width: var(--max-width);
     display: flex;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 main section .photo-img{
@@ -37,6 +81,8 @@ main section .photo-img{
 main section .photo-img img{
     border-radius: 10px;
     margin-left: 5%;
+    width: 30%; /* 반응형 이미지 크기 */
+    object-fit: cover;
 }
 
 main section .menu-img figure{
@@ -54,11 +100,16 @@ main section .menu-img figure img{
 .menu-img figcaption {
     position:absolute;
     bottom:1px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* 좌우 중앙 정렬 */
+    width: 90%; /* 고정 너비로 균일 정렬 */
+    max-width: 70%; /* 최대 너비 제한 */
     text-align: center;
-    margin-top: 10px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 10px; /* 내부 여백 추가 */
   }
   
   .menu-img figcaption p {
@@ -69,6 +120,14 @@ main section .menu-img figure img{
   .menu-img figcaption p strong {
     color: #e74c3c; /* 강조 색상 */
     font-size: 16px;
+  }
+
+  #info{
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   #info .hours,
@@ -83,23 +142,29 @@ main section .menu-img figure img{
 .service ul {
     list-style:none;
     display: flex;
+    flex-wrap: wrap; /* 두 줄로 줄바꿈 */
     gap:10px;
-    width: 1240px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: var(--max-width);
     padding: 10px 20px;
+    box-sizing: border-box;
+    
 }
 
 .service ul li{
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    padding: 5px 5px 5px 5px;
+    padding: 5px 10px;
+    
 }
 
 #review {
-  width: 1024px;
+  width: 100%;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 #review ul {
@@ -122,7 +187,7 @@ main section .menu-img figure img{
 }
 
 #review ul li .bar {
-  background: linear-gradient(to right, #c9dbfa, #588bdc);
+  background: linear-gradient(to right, #c9dbfa, #6c83a9);
   color: #1b1919;
   padding: 10px;
   border-radius: 5px;
@@ -131,7 +196,6 @@ main section .menu-img figure img{
   height: calc(100% - 20px);
   width: 0; /* 초기 너비 */
   transition: width 2s ease; 
-  max-width: 100%;
   opacity: 1;
 }
 
@@ -143,3 +207,54 @@ main section .menu-img figure img{
 #review ul li .bar-6 { width: 88%; }
 #review ul li .bar-7 { width: 65%; }
 
+@media (max-width: 900px) {
+  main {
+    margin-top: 40px; /* 모바일에서 여백 줄임 */
+  }
+  
+  header nav ul {
+    flex-wrap: wrap;
+    gap:10px;
+    padding:10px;
+  }
+
+  header nav ul li {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  header nav ul li a {
+    font-size: 16px;
+  }
+
+  main section .photo-img,
+  main section .menu-img {
+    flex-direction: column;
+    height: auto;
+  }
+
+  main section .photo-img img{
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  main section .menu-img figure{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .menu-img figcaption {
+    bottom:-50px;
+  }
+
+  #review {
+    width: 100%;
+    max-width: 1024px;
+  }
+
+  main section .photo-img,
+  main section .menu-img{
+    flex-direction: column;
+  }
+}
