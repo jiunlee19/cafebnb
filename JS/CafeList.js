@@ -1,6 +1,9 @@
 fetch('cafes.json')
   .then(response => response.json())
   .then(data => {
+    window.cafeData = data;
+    initSlider(data)
+    
     const container = document.getElementById('cafe-list');
 
     data.forEach(cafe => {
@@ -8,9 +11,10 @@ fetch('cafes.json')
       cafeDiv.classList.add('cafe');
 
       cafeDiv.innerHTML = `
-        <h2>${cafe.name}</h2>
         <img src="${cafe.image}" alt="${cafe.name}">
-        <p>${cafe.description}</p>
+        <h2>${cafe.name}</h2> 
+        <p>${cafe.location}</p>
+        <p>${cafe.score}</p>
       `;
 
       container.appendChild(cafeDiv);

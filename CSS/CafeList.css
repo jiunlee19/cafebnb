@@ -1,0 +1,27 @@
+#cafe-list {
+    /* padding-bottom:2rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+    margin: 0;
+    width: calc(100%-4rem);
+    overflow: hidden;
+}
+.cafe {
+    margin-right: 2rem;
+}
+
+#cafe-list img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 20%;
+}
+#cafe-list h2 {
+    font-size: medium;
+}
+#cafe-list p {
+    font-size: small;
+    color: gray;
+}
