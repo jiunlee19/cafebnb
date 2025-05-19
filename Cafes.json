@@ -1,0 +1,50 @@
+[
+    {
+      "name": "이끼숲소길",
+      "image": "img/이끼숲소길/이끼숲소길01.jpg",
+      "location": "애월",
+      "score": "5.0"
+    },
+    {
+        "name": "구아우쇼콜라",
+        "image": "img/구아우쇼콜라/구아우쇼콜라01.jpg",
+        "location": "서귀포",
+        "score": "4.9"
+    },
+    {
+        "name": "마마롱",
+        "image": "img/마마롱/마마롱01.jpg",
+        "location": "서귀포",
+        "score": "4.7"
+    },
+    {
+        "name": "만첩",
+        "image": "img/만첩/만첩01.jpg",
+        "location": "애월",
+        "score": "4.9"
+    },
+    {
+        "name": "사닮과",
+        "image": "img/사닮과/사닮과01.jpg",
+        "location": "서귀포",
+        "score": "4.5"
+    },
+    {
+        "name": "카페679",
+        "image": "img/카페679/카페679메뉴01.jpg",
+        "location": "서귀포",
+        "score": "4.9"
+    },
+    {
+        "name": "티나케이크",
+        "image": "img/티나케이크/티나케이크01.jpg",
+        "location": "서귀포",
+        "score": "4.6"
+    },
+    {
+        "name": "회수다옥",
+        "image": "img/회수다옥/회수다옥01.jpg",
+        "location": "애월",
+        "score": "4.1"
+    }
+  ]

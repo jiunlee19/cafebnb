@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/Index.css">
+    <link rel="stylesheet" href="CSS/CafeList.css">
     <title>CafeBnB</title>
 </head>
 <body>
     <div class="container" style="width:100vw; height:100vh;">
         <div class="header"><div data-include="./Components/Header.html"></div></div>
-        <div class="contents" style=" width:100%; margin-bottom:50px;">
+        <div class="contents" style=" width:100%; margin-bottom:50px;     display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;">
             <div class="classification-title" 
             style="width:90%; margin:0; padding:2rem; display:flex; flex-direction: row; justify-content:space-between;"> 
                 <p style="font-size: 1.125rem;">뷰 맛집!</p>
@@ -18,100 +22,23 @@
                     <button id="next-btn">></button>   
                 </div>
             </div>
-            <div style="overflow: hidden; margin:0 2rem;">
-                <div class="image-slide" 
-                style="width: 100%; margin:0; padding:0; display: flex; flex-direction: row; justify-content: flex-start; ">
-                    
-                <a class="cafe-element" style="margin-right: 1rem;">
-                        <img src="https://images.unsplash.com/photo-1579169825453-8d4b4653cc2c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                        alt="카페사진" 
-                        style="width: 10rem; height:10rem; object-fit:cover; border-radius:20%;">
-                        <div class="info">
-                            <div class="name">오르트 구름</div>
-                            <div class="location">애월</div>
-                            <div class="score">별점 5.3</div>
-                        </div>
-                    </a>
-    
-                    <a class="cafe-element" style="margin-right: 1rem;">
-                        <img src="https://images.unsplash.com/photo-1579169825453-8d4b4653cc2c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                        alt="카페사진" 
-                        style="width: 10rem; height:10rem; object-fit:cover; border-radius:20%;">
-                        <div class="info">
-                            <div class="name">오르트 구름</div>
-                            <div class="location">애월</div>
-                            <div class="score">별점 5.3</div>
-                        </div>
-                    </a>
-                    <a class="cafe-element" style="margin-right: 1rem;">
-                        <img src="https://images.unsplash.com/photo-1579169825453-8d4b4653cc2c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                        alt="카페사진" 
-                        style="width: 10rem; height:10rem; object-fit:cover; border-radius:20%;">
-                        <div class="info">
-                            <div class="name">오르트 구름</div>
-                            <div class="location">애월</div>
-                            <div class="score">별점 5.3</div>
-                        </div>
-                    </a>
-                </div>
+            
+            <div class="image-slide"
+            style="width: 100%; margin:0; padding:0;">
+                
+                <a class="cafe-element" style="margin-right: 1rem;display: flex; flex-direction: row; justify-content: flex-start; " href="./Detail.html">
+                    <div class="cafe-list"></div>
+                </a>
 
             </div>
+            
         </div>
         <div class="footer"><div data-include="./Components/Footer.html"></div></div>
     </div>
 
-    <script>
-        const imageSlide = document.querySelector('.image-slide');
-        const prevBtn = document.querySelector('#prev-btn');
-        const nextBtn = document.querySelector('#next-btn');
-    
-        let position = 0;              // 현재 위치
-        const step = 11;              // 이동 단위 rem
-        const maxSteps = 2;          // 최대 이동 횟수 (왼쪽으로 11번)
-    
-        function updateButtonsColor() {
-            // prev 버튼 색상 설정
-            if (position >= 0) {
-                prevBtn.style.backgroundColor = 'gray';
-                prevBtn.style.color = 'white';
-            } else {
-                prevBtn.style.backgroundColor = 'white';
-                prevBtn.style.color = 'gray';
-            }
-    
-            // next 버튼 색상 설정
-            if (position <= -step * maxSteps) {
-                nextBtn.style.backgroundColor = 'gray';
-                nextBtn.style.color = 'white';
-            } else {
-                nextBtn.style.backgroundColor = 'white';
-                nextBtn.style.color = 'gray';
-            }
-        }
-    
-        imageSlide.style.transition = 'transform 0.5s';
-
-        prevBtn.addEventListener('click', function () {
-            if (position < 0) {
-                position += step; // 오른쪽으로 이동
-                imageSlide.style.transform = `translateX(${position}rem)`;
-            }
-            updateButtonsColor();
-        });
-    
-        nextBtn.addEventListener('click', function () {
-            if (position > -step * maxSteps) {
-                position -= step; // 왼쪽으로 이동
-                imageSlide.style.transform = `translateX(${position}rem)`;
-            }
-            updateButtonsColor();
-        });
-    
-        // 초기 상태 설정
-        updateButtonsColor();
-    </script>
+    <script src="JS/SlideButtons.js"></script>
+    <script src="JS/CafeList.js"></script>
     <script src="JS/Include.js"></script>
-    
     
 </body>
 </html>
