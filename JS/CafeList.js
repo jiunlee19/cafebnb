@@ -8,9 +8,9 @@ fetch('cafes.json')
 
     container.forEach(container => {
       data.forEach(cafe => {
-        const cafeDiv = document.createElement('div');
+        const cafeDiv = document.createElement('a');
         cafeDiv.classList.add('cafe');
-  
+        cafeDiv.href = '../detail.html';
         cafeDiv.innerHTML = `
           <img src="${cafe.image}" alt="${cafe.name}">
           <h2>${cafe.name}</h2> 
