@@ -1,27 +1,26 @@
-#cafe-list {
+.cafe-list {
     /* padding-bottom:2rem; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     
     margin: 0;
-    width: calc(100%-4rem);
-    overflow: hidden;
+    width: calc(100%-2rem);
 }
 .cafe {
-    margin-right: 2rem;
+    margin-right: 5vw;
 }
 
-#cafe-list img {
-    width: 10rem;
-    height: 10rem;
+.cafe-list img {
+    width: 20vw;
+    height: 20vw;
     object-fit: cover;
     border-radius: 20%;
 }
-#cafe-list h2 {
+.cafe-list h2 {
     font-size: medium;
 }
-#cafe-list p {
+.cafe-list p {
     font-size: small;
     color: gray;
 }
