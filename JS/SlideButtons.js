@@ -3,7 +3,7 @@ const imageSlide = document.querySelector('.cafe-list');
         const nextBtn = document.querySelector('#next-btn');
     
         let position = 0;              // 현재 위치
-        const step = 25;              // 이동 단위 rem
+        const step = 24;              // 이동 단위 rem
         let maxSteps = 0;
         function initSlider(cafeData) {
             maxSteps = cafeData.length - 4;// 최대 이동 횟수

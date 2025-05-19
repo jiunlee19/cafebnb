@@ -8,15 +8,15 @@
     <title>CafeBnB</title>
 </head>
 <body>
-    <div class="container" style="width:100vw; height:100vh;">
+    <div class="container" style="width:100vw;">
         <div class="header"><div data-include="./Components/header.html"></div></div>
         <div class="contents" style=" width:100%; margin-bottom:50px;     display: flex;
             align-items: center;
             flex-direction: column;
             flex-wrap: wrap;">
             <div class="classification-title" 
-            style="width:90%; margin:0; padding:2rem; display:flex; flex-direction: row; justify-content:space-between;"> 
-                <p style="font-size: 1.125rem;">뷰 맛집!</p>
+            style="width:90%; margin:0; padding:4vw; display:flex; flex-direction: row; justify-content:space-between;"> 
+                <p style="font-size: 1.125rem;">🍰 디저트 카페</p>
                 <div class="btns">
                     <button id="prev-btn"><</button>
                     <button id="next-btn">></button>   
@@ -24,12 +24,23 @@
             </div>
             
             <div class="image-slide"
-            style="width: 100%; margin:0; padding:0;">
+            style="width: 92vw; margin:0; padding:0; overflow:hidden;">
                 
-                <a class="cafe-element" style="margin-right: 1rem;display: flex; flex-direction: row; justify-content: flex-start; " href="./detail.html">
-                    <div class="cafe-list"></div>
-                </a>
+                <div class="cafe-list"></div>
+            </div>
 
+            <div class="classification-title" 
+            style="width:90%; margin:0; padding:4vw; display:flex; flex-direction: row; justify-content:space-between;"> 
+                <p style="font-size: 1.125rem;">서귀포 카페</p>
+                <div class="btns">
+                    <button id="prev-btn"><</button>
+                    <button id="next-btn">></button>   
+                </div>
+            </div>
+            <div class="image-slide"
+            style="width: 92vw; margin:0; padding:0; overflow:hidden;">
+                
+                <div class="cafe-list"></div>
             </div>
             
         </div>
