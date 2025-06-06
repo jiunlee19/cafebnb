@@ -10,46 +10,60 @@
 <body>
     <div class="container" style="width:100vw;">
         <div class="header"><div data-include="components/header.html"></div></div>
-        <div class="contents" style=" width:100%; margin-bottom:50px;     display: flex;
-            align-items: center;
-            flex-direction: column;
-            flex-wrap: wrap;">
-            <div class="classification-title" 
-            style="width:90%; margin:0; padding:4vw; display:flex; flex-direction: row; justify-content:space-between;"> 
+        <div class="contents" style="width:100%; margin-bottom:50px; display: flex; align-items: center; flex-direction: column; flex-wrap: wrap;">
+            <!-- 디저트 카페 섹션 -->
+            <div class="classification-title" style="width:90%; margin:0; padding:4vw; display:flex; flex-direction: row; justify-content:space-between;"> 
                 <p style="font-size: 1.125rem;">🍰 디저트 카페</p>
                 <div class="btns">
-                    <button id="prev-btn"><</button>
-                    <button id="next-btn">></button>   
+                    <button class="prev-btn" data-slider="dessert"><</button>
+                    <button class="next-btn" data-slider="dessert">></button>   
                 </div>
             </div>
-            
-            <div class="image-slide"
-            style="width: 92vw; margin:0; padding:0; overflow:hidden;">
-                
-                <div class="cafe-list"></div>
+            <div class="image-slide" style="width: 92vw; margin:0; padding:0; overflow:hidden;">
+                <div class="cafe-list" id="dessert-slider"></div>
             </div>
 
-            <div class="classification-title" 
-            style="width:90%; margin:0; padding:4vw; display:flex; flex-direction: row; justify-content:space-between;"> 
+            <!-- 서귀포 카페 섹션 -->
+            <div class="classification-title" style="width:90%; margin:0; padding:4vw; display:flex; flex-direction: row; justify-content:space-between;"> 
                 <p style="font-size: 1.125rem;">서귀포 카페</p>
                 <div class="btns">
-                    <button id="prev-btn"><</button>
-                    <button id="next-btn">></button>   
+                    <button class="prev-btn" data-slider="seogwipo"><</button>
+                    <button class="next-btn" data-slider="seogwipo">></button>   
                 </div>
             </div>
-            <div class="image-slide"
-            style="width: 92vw; margin:0; padding:0; overflow:hidden;">
-                
-                <div class="cafe-list"></div>
+            <div class="image-slide" style="width: 92vw; margin:0; padding:0; overflow:hidden;">
+                <div class="cafe-list" id="seogwipo-slider"></div>
             </div>
-            
+
+            <!-- 애월 카페 섹션 -->
+            <div class="classification-title" style="width:90%; margin:0; padding:4vw; display:flex; flex-direction: row; justify-content:space-between;"> 
+                <p style="font-size: 1.125rem;">애월 카페</p>
+                <div class="btns">
+                    <button class="prev-btn" data-slider="aewol"><</button>
+                    <button class="next-btn" data-slider="aewol">></button>   
+                </div>
+            </div>
+            <div class="image-slide" style="width: 92vw; margin:0; padding:0; overflow:hidden;">
+                <div class="cafe-list" id="aewol-slider"></div>
+            </div>
+
+            <!-- 인기 카페 섹션 -->
+            <div class="classification-title" style="width:90%; margin:0; padding:4vw; display:flex; flex-direction: row; justify-content:space-between;"> 
+                <p style="font-size: 1.125rem;">⭐ 인기 카페</p>
+                <div class="btns">
+                    <button class="prev-btn" data-slider="popular"><</button>
+                    <button class="next-btn" data-slider="popular">></button>   
+                </div>
+            </div>
+            <div class="image-slide" style="width: 92vw; margin:0; padding:0; overflow:hidden;">
+                <div class="cafe-list" id="popular-slider"></div>
+            </div>
         </div>
         <div class="footer"><div data-include="components/footer.html"></div></div>
     </div>
-
-    <script src="js/slideButtons.js"></script>
-    <script src="js/cafeLists.js"></script>
     <script src="js/include.js"></script>
-    
+    <script src="js/cafeLists.js"></script>
+    <script src="js/slideButtons.js"></script>
 </body>
 </html>
+

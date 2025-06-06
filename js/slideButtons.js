@@ -1,52 +1,83 @@
-const imageSlide = document.querySelector('.cafe-list');
-        const prevBtn = document.querySelector('#prev-btn');
-        const nextBtn = document.querySelector('#next-btn');
-    
-        let position = 0;              // 현재 위치
-        const step = 24;              // 이동 단위 rem
-        let maxSteps = 0;
-        function initSlider(cafeData) {
-            maxSteps = cafeData.length - 4;// 최대 이동 횟수
-
-            // 초기 상태 설정
-            updateButtonsColor();
-          }          
-          
-    
-        function updateButtonsColor() {
-            // prev 버튼 색상 설정
-            if (position >= 0) {
-                prevBtn.style.backgroundColor = 'gray';
-                prevBtn.style.color = 'white';
-            } else {
-                prevBtn.style.backgroundColor = 'white';
-                prevBtn.style.color = 'gray';
-            }
-    
-            // next 버튼 색상 설정
-            if (position <= -step * maxSteps) {
-                nextBtn.style.backgroundColor = 'gray';
-                nextBtn.style.color = 'white';
-            } else {
-                nextBtn.style.backgroundColor = 'white';
-                nextBtn.style.color = 'gray';
-            }
+class Slider {
+    constructor(sliderId) {
+        this.sliderId = sliderId;
+        this.slider = document.getElementById(sliderId);
+        this.prevBtn = document.querySelector(`.prev-btn[data-slider="${sliderId.split('-')[0]}"]`);
+        this.nextBtn = document.querySelector(`.next-btn[data-slider="${sliderId.split('-')[0]}"]`);
+        this.position = 0;
+        this.step = 24;
+        this.maxSteps = 0;
+        
+        if (this.slider && this.prevBtn && this.nextBtn) {
+            this.init();
         }
-    
-        imageSlide.style.transition = 'transform 0.5s';
+    }
 
-        prevBtn.addEventListener('click', function () {
-            if (position < 0) {
-                position += step; // 오른쪽으로 이동
-                imageSlide.style.transform = `translateX(${position}vw)`;
+    init() {
+        const items = this.slider.querySelectorAll('.cafe');
+        this.maxSteps = Math.max(0, items.length - 4);
+        this.updateButtonsColor();
+        this.addEventListeners();
+    }
+
+    updateButtonsColor() {
+        if (this.position >= 0) {
+            this.prevBtn.style.backgroundColor = 'gray';
+            this.prevBtn.style.color = 'white';
+        } else {
+            this.prevBtn.style.backgroundColor = 'white';
+            this.prevBtn.style.color = 'gray';
+        }
+
+        if (this.position <= -this.step * this.maxSteps) {
+            this.nextBtn.style.backgroundColor = 'gray';
+            this.nextBtn.style.color = 'white';
+        } else {
+            this.nextBtn.style.backgroundColor = 'white';
+            this.nextBtn.style.color = 'gray';
+        }
+    }
+
+    addEventListeners() {
+        this.slider.style.transition = 'transform 0.5s';
+
+        this.prevBtn.addEventListener('click', () => {
+            if (this.position < 0) {
+                this.position += this.step;
+                this.slider.style.transform = `translateX(${this.position}vw)`;
+                this.updateButtonsColor();
             }
-            updateButtonsColor();
         });
-    
-        nextBtn.addEventListener('click', function () {
-            if (position > -step * maxSteps) {
-                position -= step; // 왼쪽으로 이동
-                imageSlide.style.transform = `translateX(${position}vw)`;
+
+        this.nextBtn.addEventListener('click', () => {
+            if (this.position > -this.step * this.maxSteps) {
+                this.position -= this.step;
+                this.slider.style.transform = `translateX(${this.position}vw)`;
+                this.updateButtonsColor();
             }
-            updateButtonsColor();
         });
+    }
+}
+
+// 페이지 로드 시 모든 슬라이더 초기화
+document.addEventListener('DOMContentLoaded', () => {
+    // 카페 데이터가 로드된 후 슬라이더 초기화
+    if (window.cafeData) {
+        initializeSliders();
+    } else {
+        // 카페 데이터 로드가 완료될 때까지 대기
+        const checkDataInterval = setInterval(() => {
+            if (window.cafeData) {
+                clearInterval(checkDataInterval);
+                initializeSliders();
+            }
+        }, 100);
+    }
+});
+
+function initializeSliders() {
+    const sliders = ['dessert-slider', 'seogwipo-slider', 'aewol-slider', 'popular-slider'];
+    sliders.forEach(sliderId => {
+        new Slider(sliderId);
+    });
+}
